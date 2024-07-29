@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="jira.utils.Listener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Users/gasto/IdeaProjects/APITesting">
+        <classes>
+            <class name="books.BookTests">
+                <methods>
+                    <include name="GetBooksByAuthor"/>
+                </methods>
+            </class>
+            <class name="jira.JiraTests">
+                <methods>
+                    <include name="failingTest"/>
+                    <include name="getBug"/>
+                    <include name="createBug"/>
+                    <include name="createBugWithAttachment"/>
+                    <include name="getEditIssueMetadata"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
